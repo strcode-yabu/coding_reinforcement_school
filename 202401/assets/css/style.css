@@ -1,0 +1,123 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700&family=BIZ+UDMincho:wght@400;700&display=swap');
+
+:root {
+  --font-gothic: 'BIZ UDGothic', sans-serif;
+  --font-mincho: 'BIZ UDMincho', serif;
+  --font-size-h1: clamp(1.5rem, 1.218rem + 1.2vw, 2rem);
+  --font-size-h2: clamp(1.125rem, 0.914rem + 0.9vw, 1.5rem);
+  --font-size-h3: clamp(1rem, 0.93rem + 0.3vw, 1.125rem);
+  --font-size-p: clamp(0.875rem, 0.805rem + 0.3vw, 1rem);
+  --color-text: #333;
+  --color-bg: #ccc;
+  --color-card-bg: #fff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+body {
+  color: var(--color-text);
+  font-family: var(--font-gothic);
+  line-height: 1.4;
+  background: var(--color-bg);
+}
+
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 16px;
+  @media (min-width: 1040px) {
+    padding: 0;
+  }
+}
+
+.header {
+  padding-top: 32px;
+  display: none;
+  .header__title {
+    font-size: var(--font-size-h1);
+    font-family: var(--font-mincho);
+    text-align: center;
+  }
+}
+
+.main {
+  margin-top: 64px;
+  @media (min-width: 840px) {
+    margin-top: 32px;
+  }
+}
+
+.section {
+  padding: 32px 0;
+  @media (min-width: 840px) {
+    padding: 92px 0;
+  }
+  & > .container {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    @media (min-width: 840px) {
+      gap: 64px;
+    }
+  }
+  .section__title {
+    font-size: var(--font-size-h2);
+    font-family: var(--font-mincho);
+    text-align: center;
+  }
+}
+
+.card__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  @media (min-width: 840px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+}
+
+.card {
+  background: var(--color-card-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 16px 1fr 16px;
+  grid-template-rows: auto auto 1fr 16px;
+  grid-template-areas:
+    "image image image"
+    ". title ."
+    ". description ."
+    ". . ."
+  ;
+  gap: 8px 0;
+  @media (min-width: 840px) {
+    grid-row: span 4;
+    grid-template-rows: subgrid;
+  }
+  .card__title {
+    font-size: var(--font-size-h3);
+    grid-area: title;
+  }
+  .card__image__wrap {
+    grid-area: image;
+  }
+  .card__description {
+    font-size: var(--font-size-p);
+    grid-area: description;
+  }
+}
