@@ -31,8 +31,8 @@
 1. Slack の参加者チャンネルに投稿される課題の GitHub リポジトリの URL にアクセスします。
 2. 表示された GitHub リポジトリのページの検索窓下あたりにある **Fork** ボタンをクリックします。  
    クリップするとリポジトリを自分のアカウントに複製するモードに移行します。
-3. リポジトリ名の後ろにご自身のアカウント名を追加します。  
-   例えばアカウント名が **example** であれば `coding_reinforcement_school__XXXXXX__example` というような形になります。  
+3. リポジトリ名の後ろにご自身のアカウント ID を追加します。  
+   例えばアカウント ID が **example** であれば `coding_reinforcement_school__XXXXXX__example` というような形になります。  
    *※ `yyyymm` は開催の年と月が入ります。*
 4. **Create Fork** のボタンを押して Fork を完了させます。
 
