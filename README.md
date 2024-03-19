@@ -2,4 +2,4 @@
 
 ## 目次
 
-- [チュートリアル](/tutorial/index.md)
+- [チュートリアル](/tutorial/README.md)
